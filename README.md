@@ -69,6 +69,10 @@ Step 3 - Generate private key.
 
 Step 4 - Upload private key (json file) to the root directory of project.
 
+Step 5 - Get the database url and paste it in ".env" file
+
+![Private key](/data/helpers/3.PNG)
+
 ## License Plate Detection and Recognition
 ```bash
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --crop
