@@ -56,11 +56,15 @@ Step 2 - Create a Firebase Realtime Database.
 
 Step 3 - Generate private key.
 
-<strong>Note:</strong>Fore generating private key , refer here-
-Click on "Service accounts"
-<p align="center"><img src="data/helpers/1.png" width="640"\></p>
-Click  on "Generate Private key" to get sdk file in json format
-<p align="center"><img src="data/helpers/2.png" width="640"\></p>
+<strong>Note: </strong>For generating private key-
+
+Click on "Service accounts".
+
+<p align="center"><img src="data/helpers/1.png" width="640"/></p>
+
+Click  on "Generate Private key" to get sdk file in json format.
+
+<p align="center"><img src="data/helpers/2.png" width="640"/></p>
 
 Step 4 - Upload private key (json file) to the root directory of project.
 
@@ -69,6 +73,7 @@ Step 4 - Upload private key (json file) to the root directory of project.
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --crop
 ```
 The crop flag will save detections to detections/crop folder and feed the cropped detections as input to Easy-OCR for character recognition purpose.
+
 <strong>Note:</strong> The script is automated to do detection and  character recognition simultaneously.
 
 
