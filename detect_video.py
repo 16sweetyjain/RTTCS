@@ -20,6 +20,8 @@ from firebase_admin import credentials
 from firebase_admin import db
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
+from dotenv import load_dotenv
+load_dotenv()
 
 flags.DEFINE_string('framework', 'tf', '(tf, tflite, trt')
 flags.DEFINE_string('weights', './checkpoints/yolov4-416',
@@ -44,7 +46,7 @@ def main(_argv):
     STRIDES, ANCHORS, NUM_CLASS, XYSCALE = utils.load_config(FLAGS)
     credential = credentials.Certificate('./firebase-sdk.json')             #adding credentials of firebase sdk
     firebase_admin.initialize_app(credential,{                              #providing reference to database url 
-    'databaseURL':'https://real-time-traffic-control-default-rtdb.firebaseio.com/' 
+    'databaseURL': os.environ.get("DATABASE_URL") 
     })
     ref= db.reference('/')
     ref.set('Timestamp')                                                     
