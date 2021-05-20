@@ -33,7 +33,7 @@ python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yol
 ```bash
 python save_model.py --weights ./data/custom.weights --output ./checkpoints/custom-416 --input_size 416 --model yolov4 
 ```
-### Run custom yolov4 tensorflow model
+### Run custom yolov4 tensorflow model (License plate detection model)
 ```bash
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi
 ```
@@ -47,7 +47,7 @@ python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yol
 ```
 To count total number of objects, set the byClass=False in line 146 of detect_video.py and use the above command.
 
-## License Plate Detection
+## License Plate Detection and Recognition
 ```bash
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --crop
 ```
