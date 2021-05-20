@@ -16,7 +16,7 @@ Copy and paste custom.names into the 'data/classes/' folder.
 
 For custom model to work, change line 14 of core/config.py from coco.name to custom.names.
 
-## YOLOv4 Using Tensorflow (tf, .pb model)
+## YOLOv4 Using Tensorflow 
 To implement YOLOv4 using TensorFlow, first we convert the .weights into the corresponding TensorFlow model files and then run the model.
 ```bash
 # Convert darknet weights to tensorflow
@@ -27,22 +27,25 @@ python save_model.py --weights ./data/yolov4.weights --output ./checkpoints/yolo
 python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi 
 ```
 
-```bash
+
 ## Custom YOLOv4
 ### Convert custom weights to tensorflow
+```bash
 python save_model.py --weights ./data/custom.weights --output ./checkpoints/custom-416 --input_size 416 --model yolov4 
-
+```
 ### Run custom yolov4 tensorflow model
-#### The detections will be saved within detections/crop folder and will then be fed to Easy-OCR
+```bash
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --crop
 ```
+#### The detections will be saved within detections/crop folder and will then be fed to Easy-OCR
+
+
 ###Count Total Objects
 ### To count total objects all that is needed is to add the custom flag "--count" to your detect.py or detect_video.py command.
 
-```bash
 # Run yolov4 model while counting total objects detected
-#Set the byClass=False in line 146 of detect_video.py
-python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --count
-# Run yolov4 model to count objects per class
+# To count number of objects per class use following command
+```bash
 python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --count
 ```
+# To count total number of objects, set the byClass=False in line 146 of detect_video.py and use the above command.
