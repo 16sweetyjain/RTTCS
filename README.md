@@ -47,6 +47,19 @@ python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yol
 ```
 To count total number of objects, set the byClass=False in line 146 of detect_video.py and use the above command.
 
+## Save Object Count to Database 
+For this purpose we will use Firebase Realtime Database
+#### Getting Started
+Step 1 - Create a Firebase account
+Step 2 - Create a Firebase Realtime Database
+Step 3 - Generate private key
+Note - Fore generating private key , refer here-
+Click on "Service accounts"
+<p align="center"><img src="data/helpers/1.png" width="640"\></p>
+Click  on "Generate Private key" to get sdk file in json format
+<p align="center"><img src="data/helpers/2.png" width="640"\></p>
+Step 4 - Upload private key (json file) to the root directory of project
+
 ## License Plate Detection and Recognition
 ```bash
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --crop
