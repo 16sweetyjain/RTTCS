@@ -60,18 +60,18 @@ Step 3 - Generate private key.
 
 --> Click on "Service accounts".
 
-![Private key](/data/helpers/1.PNG)
+![Private key](/data/helpers/one.gif)
 
 
 --> Click  on "Generate Private key" to get sdk file in json format.
 
-![Private key](/data/helpers/2.PNG)
+![Private key](/data/helpers/two.gif)
 
 Step 4 - Upload private key (json file) to the root directory of project.
 
-Step 5 - Get the database url and paste it in ".env" file
+Step 5 - Get the database url and paste it in ".env" file.
 
-![Private key](/data/helpers/3.PNG)
+![Private key](/data/helpers/three.gif)
 
 ## License Plate Detection and Recognition
 ```bash
