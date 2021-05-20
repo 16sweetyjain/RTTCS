@@ -38,7 +38,7 @@ python save_model.py --weights ./data/custom.weights --output ./checkpoints/cust
 python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi
 ```
 
-### Count Total Objects
+## Count Total Objects
 #### To count total objects all that is needed is to add the custom flag "--count" to your detect.py or detect_video.py command.
 
 To count number of objects per class use following command
@@ -46,5 +46,13 @@ To count number of objects per class use following command
 python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --count
 ```
 To count total number of objects, set the byClass=False in line 146 of detect_video.py and use the above command.
+
+## License Plate Detection
+```bash
+python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --crop
+```
+The crop flag will save detections to detections/crop folder and feed the cropped detections as input to Easy-OCR for character recognition purpose.
+Note: The script is automated to do detection and  character recognition simultaneously.
+
 
 
