@@ -60,7 +60,8 @@ Step 3 - Generate private key.
 
 Click on "Service accounts".
 
-<p align="center"><img src="data/helpers/1.png" width="640"/></p>
+![Private key](/data/helpers/1.PNG)
+
 
 Click  on "Generate Private key" to get sdk file in json format.
 
