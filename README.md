@@ -39,9 +39,8 @@ python detect_video.py --weights ./checkpoints/custom-416 --size 416 --model yol
 ```
 #### The detections will be saved within detections/crop folder and will then be fed to Easy-OCR
 ### Count Total Objects
-### To count total objects all that is needed is to add the custom flag "--count" to your detect.py or detect_video.py command.
+#### To count total objects all that is needed is to add the custom flag "--count" to your detect.py or detect_video.py command.
 
-### Run yolov4 model while counting total objects detected
 #### To count number of objects per class use following command
 ```bash
 python detect_video.py --weights ./checkpoints/yolov4-416 --size 416 --model yolov4 --video ./data/video/input_video.mp4 --output ./detections/recognition.avi --count
